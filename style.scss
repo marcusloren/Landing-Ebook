@@ -1,0 +1,315 @@
+//Reset
+* {
+    margin: 0;
+    padding: 0;
+}
+
+//Fontes
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,600italic,400italic,700,700italic,800,800italic);
+@font-face {
+    font-family: 'aleobold';
+    src: url('../fonts/Aleo-Bold-webfont.eot');
+    src: url('../fonts/../fonts/Aleo-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Aleo-Bold-webfont.woff') format('woff'),
+         url('../fonts/Aleo-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/Aleo-Bold-webfont.svg#aleobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+//Cabecalho
+
+@mixin font ($ft_style,$weight,$font,$color,$ft_size){
+font-style:$ft_style;
+font-weight:$weight;
+font-family:$font;
+color:$color;    
+font-family:$font; 
+font-size:$ft_size;    
+    
+}
+
+@mixin topbar ($bg,$txt_color,$center){
+background-color:$bg;
+color:$txt_color;
+text-align:$center; 
+    
+    p{
+    @include font(italic, 700, 'Open Sans', #fff,20px);     
+        
+    }
+    
+    
+   
+    
+    
+}
+
+#topo{
+   
+    h1{
+    text-align:center;    
+     margin-top:0;
+        padding-top:72px;
+        letter-spacing:-1px;
+    @include font(normal, 400, 'Open Sans', #000,30px); 
+        strong{
+        font-style:italic;    
+            
+        } 
+        
+         span{
+        
+    @include  font(normal,bold,'aleobold',#f15b27,56.73px);
+            text-transform:uppercase; 
+        
+    }
+    }    
+    
+    
+    
+}
+
+#bar{
+    
+@include topbar(#000, #fff, center); 
+height:51px; 
+line-height:51px;
+   
+    
+}
+
+
+.fundo-listras{
+min-height:719px;    
+background:url(../images/fundo-listras.gif) repeat-x ;    
+    
+}
+
+.livro{
+    
+    img{
+        
+      padding-left:105px;
+    box-sizing:content-box;   
+    margin-top:50px;    
+        
+    }    
+    
+    
+}
+
+
+.form{
+    
+    .container-form{
+       @include topbar(#000, #fff, center); 
+        min-height:467px;
+        padding:20px 45px 0px 45px;
+       margin-top:50px; 
+        margin-right:54px;
+        
+        h2{
+            
+        @include font(normal, 400, 'Open Sans', #fff,22px); 
+            strong{font-weight:700;}    
+        } 
+        
+        
+        .form-group {
+    margin-bottom: 0px;
+            margin-top:37px;
+            input{margin-bottom:6px; border:0; border-radius:6px;}
+}
+        
+        .empresa{
+         padding-right: 0px;
+padding-left: 15px;   
+            
+            
+        }
+        
+        .cargo{
+       
+            padding-left:6px;
+            
+        }
+        
+        .bt-cl-action{
+        background-color:#41d407;
+            height:60px;
+            text-align:center;
+            padding:0 40px 0 40px;
+            border-radius:10px;
+            line-height:60px;
+            border:0;
+             @include font(normal, 700, 'Open Sans', #fff,18px); 
+            text-transform:uppercase;
+            margin-top:43px;
+            &:hover{
+            background-color:#2f9705;    
+                
+            }
+            
+        } 
+        
+       .select-style {
+    padding: 0;
+    margin: 0;
+    
+    width: 100%;
+    border-radius: 7px;
+    overflow: hidden;
+    background-color: #fff;
+color:#878787;
+    background: #fff url("../images/seta-select.gif") no-repeat right;
+}
+
+.select-style select {
+   
+    width: 100%;
+    height:40px;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    padding:5px;
+    
+}
+
+.select-style select:focus {
+    outline: none;
+}
+    }    
+    
+}
+
+#o-que-voce-precisa-saber{
+  background:url(../images/bg-ladrilhos.gif) ; 
+    min-height:400px;
+    
+    .container{max-width:1068px;}
+    h2{ text-align:center;
+        margin-top:130px;
+        margin-bottom:32px;
+        letter-spacing:-1px;
+    @include  font(italic,100,'Open Sans',#000,32px);  
+        strong{font-weight:700;}
+        
+    }
+    
+    p{
+    @include  font(normal,100,'Open Sans',#252525,16px);      
+        
+    }
+    
+    .publico{
+        
+        h3{background:url(../images/ico-publico.png) no-repeat left;
+        height:64px;
+            padding-left:87px;
+            line-height:64px;
+        }    
+        
+    }
+    
+    
+    .plataforma{
+        
+        h3{
+            
+        background:url(../images/ico-plataforma.png) no-repeat left;
+        height:79px;
+            line-height:79px;
+            padding-left:87px;    
+            
+            
+        } 
+        
+    }
+        
+       
+    .campanhas{
+        
+        h3{
+            
+        background:url(../images/ico-campanhas.png) no-repeat left;
+        height:65px;
+            line-height:65px;
+            padding-left:87px;    
+            
+            
+        }  
+         
+        
+        
+        
+    }
+    
+    h3{
+    @include  font(italic,700,'Open Sans',#000,25px);    
+        
+    }
+    
+    
+    
+}
+
+@media only screen and (min-width : 1200px){
+    
+    .container{width:1154px;}
+    
+}
+ 
+@media only screen and (max-width : 979px){
+ 
+}
+ 
+@media only screen and (max-width : 767px){
+    #bar{height: auto; min-height:auto; line-height:25px;}
+    .livro img {padding-left:0;}
+    .container-form{
+    
+    width:100%;
+    
+}
+    
+    .container-form{
+        .bt-cl-action{ font-size: 12px!important;
+        
+        margin-bottom:30px;
+        }
+        
+        
+        
+    }
+   
+    
+}
+ 
+@media only screen and (max-width : 480px){
+    
+ #topo{
+   
+        h1{
+            
+            span{font-size:50px;}
+            
+     }
+        
+    }    
+    
+    
+ 
+}
+ 
+@media only screen and (max-width : 320px){
+    
+   
+ 
+}
